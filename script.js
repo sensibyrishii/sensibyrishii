@@ -1,69 +1,51 @@
 
-function findSensi() {
+function findSensi(){
 
-    let phone = document.getElementById("phone").value.toLowerCase().trim();
-    let output = document.getElementById("output");
+let phone = document.getElementById("phone").value.toLowerCase();
+let output = document.getElementById("output");
 
-    let devices = {
+let devices = {
 
-        "iphone": {
-            name: "🍎 iPhone",
-            sensi: "General: 100<br>Red Dot: 95<br>2x Scope: 90<br>4x Scope: 85"
-        },
+"iphone 15":"General: 100<br>Red Dot: 95<br>2x Scope: 90<br>4x Scope: 85",
+"iphone 14":"General: 100<br>Red Dot: 96<br>2x Scope: 92<br>4x Scope: 86",
 
-        "samsung": {
-            name: "📱 Samsung",
-            sensi: "General: 100<br>Red Dot: 100<br>2x Scope: 95<br>4x Scope: 90"
-        },
+"samsung s24":"General: 100<br>Red Dot: 100<br>2x Scope: 95<br>4x Scope: 90",
+"samsung a54":"General: 95<br>Red Dot: 92<br>2x Scope: 88<br>4x Scope: 84",
 
-        "realme": {
-            name: "⚡ Realme",
-            sensi: "General: 95<br>Red Dot: 90<br>2x Scope: 85<br>4x Scope: 80"
-        },
+"oneplus 12":"General: 100<br>Red Dot: 98<br>2x Scope: 94<br>4x Scope: 88",
 
-        "oneplus": {
-            name: "🚀 OnePlus",
-            sensi: "General: 100<br>Red Dot: 98<br>2x Scope: 92<br>4x Scope: 88"
-        },
+"realme gt":"General: 98<br>Red Dot: 94<br>2x Scope: 90<br>4x Scope: 85",
 
-        "xiaomi": {
-            name: "🔥 Xiaomi",
-            sensi: "General: 95<br>Red Dot: 94<br>2x Scope: 90<br>4x Scope: 85"
-        },
+"redmi note 13":"General: 96<br>Red Dot: 92<br>2x Scope: 88<br>4x Scope: 84",
 
-        "vivo": {
-            name: "💙 Vivo",
-            sensi: "General: 96<br>Red Dot: 92<br>2x Scope: 88<br>4x Scope: 82"
-        },
+"vivo v30":"General: 97<br>Red Dot: 93<br>2x Scope: 89<br>4x Scope: 85"
 
-        "oppo": {
-            name: "💚 OPPO",
-            sensi: "General: 95<br>Red Dot: 90<br>2x Scope: 85<br>4x Scope: 80"
-        }
+};
 
-    };
 
-    let found = false;
+let found=false;
 
-    for (let brand in devices) {
+for(let device in devices){
 
-        if (phone.includes(brand)) {
+if(phone.includes(device)){
 
-            output.innerHTML = `
-                <h2>${devices[brand].name} SENSI 🎯</h2>
-                <hr>
-                ${devices[brand].sensi}
-            `;
+output.innerHTML=
+"🔥 "+device.toUpperCase()+" SENSI 🔥<br><br>"+
+devices[device];
 
-            found = true;
-            break;
-        }
-    }
+found=true;
+break;
 
-    if (!found) {
-        output.innerHTML = `
-            <h3>❌ Device Not Found</h3>
-            <p>Rishii Team will add this device soon 🚀</p>
-        `;
-    }
+}
+
+}
+
+
+if(!found){
+
+output.innerHTML=
+"❌ Device not found<br>Soon adding more phones 🔥";
+
+}
+
 }
