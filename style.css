@@ -130,3 +130,26 @@ transform:scale(1);
 .card h3{
     color:#00ff88;
 }
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
+}
+
+nav h2{
+    color:#00ff88;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-size:16px;
+}
+
+nav a:hover{
+    color:#00ff88;
+}
