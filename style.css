@@ -211,3 +211,24 @@ button{
 }
 
 }
+body{
+    background:
+    radial-gradient(circle at top, #003322, #050505 40%);
+    min-height:100vh;
+}
+
+header, .hero, #result, .card{
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow{
+
+from{
+    box-shadow:0 0 5px #00ff88;
+}
+
+to{
+    box-shadow:0 0 20px #00ff88;
+}
+
+}
