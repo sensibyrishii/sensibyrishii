@@ -153,3 +153,29 @@ nav a{
 nav a:hover{
     color:#00ff88;
 }
+.hero{
+    margin:40px auto;
+    padding:50px 20px;
+    width:90%;
+    max-width:800px;
+    background:#111;
+    border-radius:25px;
+    border:1px solid #222;
+}
+
+.hero h1{
+    font-size:35px;
+    color:#00ff88;
+}
+
+.hero p{
+    margin:20px;
+    color:#aaa;
+    font-size:18px;
+}
+
+.hero button{
+    margin:0;
+    padding:15px 30px;
+    font-size:16px;
+}
